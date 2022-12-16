@@ -30,7 +30,12 @@ app.get("/compose", (req, res) => {
 });
 
 app.post("/compose", (req, res) => {
-  console.log(req.body.compose);
+
+  const post = {
+    title: req.body.title,
+    body: req.body.body
+  };
+  console.log(post);
 });
 
 app.listen(3000, function () {
